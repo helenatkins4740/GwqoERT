@@ -3,7 +3,6 @@
 from dotenv import dotenv_values
 
 DEFAULTS = {
-    "SUBREDDIT": "AskReddit",
     "ALLOW_NSFW": "False",
     "POST_ID": "",
     "THEME": "DARK",
@@ -17,7 +16,6 @@ DEFAULTS = {
 
 
 class Config:
-    def __init__(self):
         self.raw = dotenv_values("../.env")
         self.load_attrs()
 
